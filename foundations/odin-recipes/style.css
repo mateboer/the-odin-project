@@ -1,0 +1,139 @@
+body {
+    background-color: rgb(240, 240, 240);
+    margin: 0px;
+}
+
+/* Fredericka+the+Great&family=Knewave&family=Patrick+Hand+SC */
+h1,
+h2 {
+    font-family: Knewave;
+    color: rgb(18, 19, 19);
+    background-color: rgb(207, 207, 61);
+    margin: 0px;
+}
+
+h1 {
+    text-align: left;
+    font-size: 3em;
+    padding: 40px 0px 10px 5vw;
+}
+
+a {
+    display: block;
+    ;
+    font-family: 'Patrick Hand SC';
+    margin: 0px;
+    padding: 10px 0px 50px 7.5vw;
+    background-color: rgb(207, 207, 61);
+}
+
+.material-symbols-outlined {
+    font-size: 12px !important;
+    font-variation-settings:
+        'FILL' 5,
+        'wght' 400,
+        'GRAD' 6,
+        'opsz' 48;
+}
+
+h2 {
+    font-size: 2em;
+    padding: 15px 0px 25px 5vw;
+}
+
+img {
+    display: block;
+    height: auto;
+    background-color: rgb(219, 217, 217);
+    max-height: 500px;
+    max-width: min(72.5vw, 590px);
+    object-fit: contain;
+    margin: 0px 7.5vw 0px 7.5vw;
+    border-style: solid;
+    border-color: rgb(207, 207, 61);
+    border-width: 20px 15px 0px 15px;
+}
+
+p,
+table {
+    font-family: 'Fredericka the Great';
+    text-align: justify;
+    line-height: 25px;
+    word-spacing: 4px;
+    color: aliceblue;
+    padding: calc(2.5vw + 10px) calc(3vw + 15px) calc(3vw + 15px) calc(3vw + 15px);
+    margin: 0px 5vw 0px 10vw;
+    background-color: rgb(46, 45, 42);
+}
+
+ol,
+ul {
+    padding: 10px 15px 35px 20px;
+    background-color: rgb(219, 217, 217);
+    margin: 0px 5vw 0px 5vw;
+    max-width: 650px;
+    box-shadow: 2px 2px 3px 2px rgba(46, 45, 42, 0.167);
+}
+
+ul li {
+    font-size: 18px;
+    list-style-position: inside;
+    padding: 20px 15px 20px 25px;
+    max-width: 350px;
+}
+
+ol li {
+    list-style-position: inside;
+    padding: 20px 15px 20px 25px;
+    max-width: 450px;
+}
+
+li {
+    font-family: 'Patrick Hand SC';
+    font-size: larger !important;
+    font-weight: 600;
+    color: rgb(18, 19, 19);
+    border-bottom-style: solid;
+    border-color: rgb(18, 19, 19);
+    margin: 10px 0px 10px 7.5vw;
+}
+
+table {
+    width: auto;
+    margin: 0px auto 0px 7.5vw;
+    padding: 30px 30px 50px 30px;
+}
+
+th, td {
+    border-bottom: 1px solid #ccc;
+    /* Light gray border for grid lines */
+    padding: max(1vw, 5px);
+    text-align: center;
+    font-weight: normal;
+}
+
+#index-blackboard {
+    font-size: min(2em, 7.5vw);
+    text-align: center;
+}
+
+#index-header {
+    font-size: max(3em, 10vw);
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+}
+
+.recipe-list {
+    margin: 0px auto 0px auto;
+}
+
+.recipe-list a {
+    display: inline;
+    font-size: larger;
+    font-weight: 800;
+    background-color: transparent;
+}
+
+.recipe-list li:hover {
+    background-color: rgba(207, 207, 61, 0.849);
+}
