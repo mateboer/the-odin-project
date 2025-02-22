@@ -1,0 +1,18 @@
+
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    aspect-ratio: 1;
+    border: 1px solid black;
+}
+
+.row {
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    flex: auto;
+}
