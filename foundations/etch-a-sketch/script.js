@@ -1,18 +1,29 @@
-import { resetGrid, increaseTransparency, resetTransparency } from "./grid.js";
+import { createColors, selectColor, shiftColor } from "./colors.js";
+import { resetGrid, increaseTransparency } from "./grid.js";
 
 (function index() {
   document.addEventListener("DOMContentLoaded", main);
 })();
 
 function main(event) {
-  resetGrid(16);
+  createColors();
+  registerColorSelectionCallback();
+  resetGrid(64);
   registerResizeFormCallback();
   registerHoverEffect();
 }
 
-function registerResizeFormCallback()
-{
-    document
+function registerColorSelectionCallback() {
+  document
+    .querySelector("#color-container")
+    .addEventListener("click", (event) => {
+      const color = event.target;
+      if (color?.classList.contains("color")) selectColor(color);
+    });
+}
+
+function registerResizeFormCallback() {
+  document
     .querySelector("#grid-resize-form")
     .addEventListener("submit", (event) => {
       event.preventDefault();
@@ -23,13 +34,23 @@ function registerResizeFormCallback()
     });
 }
 
-function registerHoverEffect()
-{
-    document
+function registerHoverEffect() {
+  document
     .querySelector("#grid-container")
-    .addEventListener("mouseover", (event) => {
+    .addEventListener("mousemove", (event) => {
+      if (event.buttons > 0) {
+        const cell = event.target;
+        if (cell?.classList.contains("cell")) {
+          increaseTransparency(cell);
+          shiftColor(cell);
+        }
+      }
+    });
+
+  document
+    .querySelector("#grid-container")
+    .addEventListener("click", (event) => {
       const cell = event.target;
       if (cell?.classList.contains("cell")) increaseTransparency(cell);
     });
 }
-

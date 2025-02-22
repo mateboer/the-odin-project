@@ -8,15 +8,16 @@
     <script src="script.js" type="module"></script>
   </head>
   <body>
-    <head>
-        <h1>Etch a Sketch</h1>
-    </head>
+    <header>
+      <h1>Etch a Sketch</h1>
+    </header>
     <main>
-        <form id="grid-resize-form">
-            <input type="number" name="grid-size" placeholder="Enter grid size" />
-            <button type="submit">Resize grid</button>
-        </form>
-        <div id="grid-container"></div>
+      <form id="grid-resize-form">
+        <input type="number" name="grid-size" value="64" />
+        <button type="submit">Reset</button>
+      </form>
+      <div id="color-container"></div>
+      <div id="grid-container"></div>
     </main>
     <footer></footer>
   </body>
