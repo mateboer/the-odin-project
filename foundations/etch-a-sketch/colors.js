@@ -32,10 +32,10 @@ function selectColor(color) {
 }
 
 function shiftColor(target) {
-  const [_basePrefix, baseR, baseG, baseB, baseA = "1"] = getComputedStyle(
+  const [, baseR, baseG, baseB, baseA = "1"] = getComputedStyle(
     target
   ).backgroundColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
-  const [_chosenPrefix, chosenR, chosenG, chosenB] = getComputedStyle(
+  const [, chosenR, chosenG, chosenB] = getComputedStyle(
     chosenColor
   ).backgroundColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)\)/);
   const newR =

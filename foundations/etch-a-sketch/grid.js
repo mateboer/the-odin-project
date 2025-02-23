@@ -40,7 +40,7 @@ function resetTransparency(cell) {
 }
 
 function increaseTransparency(cell) {
-  const [_, r, g, b, a] = cell.style.backgroundColor.match(
+  const [, r, g, b, a] = cell.style.backgroundColor.match(
     /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/
   );
   cell.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${

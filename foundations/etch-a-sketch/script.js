@@ -8,7 +8,7 @@ var toggled = false;
   document.addEventListener("DOMContentLoaded", main);
 })();
 
-function main(event) {
+function main() {
   createColors();
   registerColorSelectionCallback();
   resetGrid(64);
@@ -60,11 +60,11 @@ function registerHoverEffect() {
 }
 
 function registerToggleCallback() {
-  document.querySelector("#toggle").addEventListener("click", (event) => {
+  document.querySelector("#toggle").addEventListener("click", () => {
     togglePen = !togglePen;
     toggled = true;
   });
-  document.querySelector("body").addEventListener("click", (event) => {
+  document.querySelector("body").addEventListener("click", () => {
     if (togglePen) {
       toggled = !toggled;
     }

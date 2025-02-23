@@ -65,6 +65,7 @@ main {
 .cell {
   flex: auto;
   -webkit-user-select: none; /* Prevents text selection */
+  user-select: none;
   -webkit-user-drag: none; /* Prevents drag in WebKit browsers */
 }
 
@@ -80,7 +81,7 @@ form {
   padding: 5px;
 }
 
-#toggle-label{
+#toggle-label {
   background-color: white;
   text-align: center;
   height: 40px;
