@@ -1,6 +1,9 @@
 import { createColors, selectColor, shiftColor } from "./colors.js";
 import { resetGrid, increaseTransparency } from "./grid.js";
 
+var togglePen = false;
+var toggled = false;
+
 (function index() {
   document.addEventListener("DOMContentLoaded", main);
 })();
@@ -11,6 +14,7 @@ function main(event) {
   resetGrid(64);
   registerResizeFormCallback();
   registerHoverEffect();
+  registerToggleCallback();
 }
 
 function registerColorSelectionCallback() {
@@ -38,7 +42,7 @@ function registerHoverEffect() {
   document
     .querySelector("#grid-container")
     .addEventListener("mousemove", (event) => {
-      if (event.buttons > 0) {
+      if (event.buttons > 0 || (togglePen && toggled)) {
         const cell = event.target;
         if (cell?.classList.contains("cell")) {
           increaseTransparency(cell);
@@ -53,4 +57,16 @@ function registerHoverEffect() {
       const cell = event.target;
       if (cell?.classList.contains("cell")) increaseTransparency(cell);
     });
+}
+
+function registerToggleCallback() {
+  document.querySelector("#toggle").addEventListener("click", (event) => {
+    togglePen = !togglePen;
+    toggled = true;
+  });
+  document.querySelector("body").addEventListener("click", (event) => {
+    if (togglePen) {
+      toggled = !toggled;
+    }
+  });
 }
