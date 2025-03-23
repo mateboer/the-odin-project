@@ -1,0 +1,12 @@
+* {
+  outline: solid 1px red;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: 300px;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px;
+  gap: 1rem;
+}
